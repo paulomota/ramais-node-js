@@ -1,0 +1,23 @@
+{
+  "name": "ramais",
+  "version": "1.0.0",
+  "description": "projeto em node.js para disponibilizar na web os ramais da empresa",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "paulomota",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-load": "^1.1.16",
+    "mysql": "^2.14.1",
+    "socket.io": "^2.0.3"
+  },
+  "devDependencies": {
+    "mocha": "^3.5.0",
+    "supertest": "^3.0.0"
+  }
+}
