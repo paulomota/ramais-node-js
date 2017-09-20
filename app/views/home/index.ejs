@@ -57,51 +57,42 @@
         <div id="header-content">
             <nav id="main-nav">
 
+                
                 <ul class="clearfix">
-                    <li><a href="/produtos/form" rel="nofollow">Cadastrar</a></li>
+        
+                    <li><a href="/produtos/form" rel="nofollow"></a></li>
+                    
                 </ul>
+            
             </nav>
         </div>
     </div>
 </header>
 <nav class="categories-nav">
     <ul class="container">
-        <li class="category"><a href="http://www.casadocodigo.com.br">Home</a></li>
+        <li class="category"><a href="/">Home</a></li>
     </ul>
 </nav>
 
 <!-- inicio da listagem em si-->
 <section id="index-section" class="container middle" ng-controller="HomeController">
 
-    <!--
-    <ul id="home-highlight-collection">
-        <%for(i=0; i<3; i++) {%>
-        <li class="col-left">
-            <a href="linkDetalhe" class="block clearfix">
-                <img width="170" height="240" src="//cdn.shopify.com/s/files/1/0155/7645/products/nodejs-featured_large.png?v=1411486494" alt="<%=livros[i].titulo%>" title="<%=livros[i].titulo%>"/>
-
-                <h2 class="product-title"><%=livros[i].titulo%></h2>
-                <small class="buy-button">Lan&#231;amento!</small>
-            </a>
-        </li>
-        <%}%>
-    </ul>
-    -->
-
-    <ul class="clearfix book-collection">
-        <%for(i=0; i<livros.length; i++) {%>
-            <li>
-                <a href="linkDetalhe" class="block clearfix">
-                    <h2 class="product-title"><%=livros[i].titulo%></h2>
-                    <h1><%= livros[i].descricao %></h1>
-
-                    <small class="buy-button"><%= livros[i].preco %></small>
-                </a>
-            </li>
-        <%}%>
-
-    </ul>
-
+    <br/>
+    <table class="table table-striped">
+            <tr>
+                <th>Ramal</th>
+                <th>Setor</th>
+                <th>Colaborador</th>
+            </tr>
+        <%for(i=0; i<ramais.length; i++) {%>
+            <tr>
+                <td><%=ramais[i].ramal%></td>
+                <td><%=ramais[i].setor%></td>
+                <td><%=ramais[i].colaborador%></td>
+            </tr>
+        <%}%>        
+    </table>
+    <br/>
 
 </section>
 
@@ -110,16 +101,15 @@
 <footer id="layout-footer">
     <div class="clearfix container">
 
-
         <div id="collections-footer">
             <!-- cdc-footer -->
             <p class="footer-title">Links Infosolo</p>
             <ul class="footer-text-links">
-                <li><a href="/collections/livros-de-java">Site</a></li>
-                <li><a href="/collections/livros-desenvolvimento-web">Microsoft</a></li>
-                <li><a href="/collections/livros-de-mobile">Jira</a></li>
-                <li><a href="/collections/games">SIREC</a></li>
-                <li><a href="/collections/livros-de-front-end">SICOMV</a></li>
+                <li><a href="/collections/livros-de-java" target="_blank">Site</a></li>
+                <li><a href="https://login.microsoftonline.com" target="_blank">Microsoft</a></li>
+                <li><a href="https://infosolo.atlassian.net" target="_blank">Jira</a></li>
+                <li><a href="www.sirec.com.br" target="_blank">SIREC</a></li>
+                <li><a href="hmp.sicomv.com.br" target="_blank">SICOMV</a></li>
             </ul>
         </div>
     </div>
