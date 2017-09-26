@@ -8,39 +8,10 @@
           type="image/ico"/>
     <link href="https://plus.googlecom/108540024862647200608"
           rel="publisher"/>
-    <title>Livros de Java, SOA, Android, iPhone, Ruby on Rails e
-        muito mais - Casa do Código</title>
-    <link href="/css/site/cssbase-min.css"
-          rel="stylesheet" type="text/css" media="all"/>
+    <title>Ramais Infosolo</title>
+    
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700'
           rel='stylesheet'/>
-    <link
-            href="/css/site/fonts.css"
-            rel="stylesheet" type="text/css" media="all"/>
-    <link
-            href="/css/site/fontello-ie7.css"
-            rel="stylesheet" type="text/css" media="all"/>
-    <link
-            href="/css/site/fontello-embedded.css"
-            rel="stylesheet" type="text/css" media="all"/>
-    <link
-            href="/css/site/fontello.css"
-            rel="stylesheet" type="text/css" media="all"/>
-
-    <link
-            href="/css/site/style.css"
-            rel="stylesheet" type="text/css" media="all"/>
-
-    <link
-            href="/css/site/layout-colors.css"
-            rel="stylesheet" type="text/css" media="all"/>
-    <link
-            href="/css/site/responsive-style.css"
-            rel="stylesheet" type="text/css" media="all"/>
-    <link rel="canonical" href="http://www.casadocodigo.com.br/"/>
-
-    <link href="/css/site/book-collection.css"
-          rel="stylesheet" type="text/css" media="all"/>
 
     <link rel="stylesheet" href="/css/bootstrap.min.css">
     <script src="/js/bootstrap.min.js"></script>
@@ -48,30 +19,31 @@
 </head>
 <body class="home">
 
-<header id="layout-header">
-    <div class="clearfix container">
-        <a href="/" id="logo">
-            <img src="/img/logo.png" alt="Casa do Codigo">
-        </a>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="/">Ramais Infosolo</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
 
-        <div id="header-content">
-            <nav id="main-nav">
-
-                
-                <ul class="clearfix">
-        
-                    <li><a href="/produtos/form" rel="nofollow"></a></li>
-                    
-                </ul>
-            
-            </nav>
-        </div>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <!--
+            <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+            -->
+        </ul>
+        <form action="/ramais/pesquisar" method="get" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" name="nomeColaborador" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+        </form>
     </div>
-</header>
-<nav class="categories-nav">
-    <ul class="container">
-        <li class="category"><a href="/">Home</a></li>
-    </ul>
 </nav>
 
 <!-- inicio da listagem em si-->
@@ -87,29 +59,36 @@
         <%for(i=0; i<ramais.length; i++) {%>
             <tr>
                 <td><%=ramais[i].ramal%></td>
-                <td><%=ramais[i].setor%></td>
+                <td><%=ramais[i].nome_setor%></td>
                 <td><%=ramais[i].colaborador%></td>
             </tr>
         <%}%>        
     </table>
     <br/>
 
+    
+        <% if(ramais.length == 0){ %>
+            <div>
+                <p>Nenhum ramal encontrado</p>
+            </div>                
+        <% } %>
+    
 </section>
 
 <!-- fim-->
 
-<footer id="layout-footer">
-    <div class="clearfix container">
+<footer class="footer">
+    <div class="container">
 
         <div id="collections-footer">
             <!-- cdc-footer -->
             <p class="footer-title">Links Infosolo</p>
             <ul class="footer-text-links">
-                <li><a href="/collections/livros-de-java" target="_blank">Site</a></li>
+                <li><a href="http://www.infosolo.com.br" target="_blank">Site</a></li>
                 <li><a href="https://login.microsoftonline.com" target="_blank">Microsoft</a></li>
                 <li><a href="https://infosolo.atlassian.net" target="_blank">Jira</a></li>
-                <li><a href="www.sirec.com.br" target="_blank">SIREC</a></li>
-                <li><a href="hmp.sicomv.com.br" target="_blank">SICOMV</a></li>
+                <li><a href="http://www.sirec.com.br" target="_blank">SIREC</a></li>
+                <li><a href="http://hmp.sicomv.com.br" target="_blank">SICOMV</a></li>
             </ul>
         </div>
     </div>
